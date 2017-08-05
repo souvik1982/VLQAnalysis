@@ -1,19 +1,3 @@
-std::string ftoa(double i) 
-{
-  char res[10];
-  sprintf(res, "%2.0f", i);
-  std::string ret(res);
-  return ret;
-}
-
-std::string ftoa1(double i) 
-{
-  char res[10];
-  sprintf(res, "%2.1f", i);
-  std::string ret(res);
-  return ret;
-}
-
 double GaussGauss(double *x, double *par)
 {
   // par[0] = mean of 1st gaussian
