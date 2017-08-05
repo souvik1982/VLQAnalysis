@@ -36,7 +36,6 @@ struct FitParameters
   float fitRangeSS_lo, fitRangeSS_hi;
   float parLimitUS_lo[6], parLimitUS_hi[6];
   float parLimitSS_lo[6], parLimitSS_hi[6];
-  
 };
 
 void fit(TH3F *hOS, TH3F *hSS, FitParameters *fitParameters, std::ofstream &outfile)
@@ -465,19 +464,6 @@ void VLQ_ChargeFlipRate_Fit_ee()
   v_fitParameters.at(11).parLimitSS_lo[4]=5; v_fitParameters.at(11).parLimitSS_hi[4]=15;
   v_fitParameters.at(11).parLimitSS_lo[5]=2;  v_fitParameters.at(11).parLimitSS_hi[5]=10;
   
-  /*v_fitParameters.at(12).parLimitUS_lo[0]=80;  v_fitParameters.at(12).parLimitUS_hi[0]=110;
-  v_fitParameters.at(12).parLimitUS_lo[1]=10;  v_fitParameters.at(12).parLimitUS_hi[1]=30;
-  v_fitParameters.at(12).parLimitUS_lo[2]=90;  v_fitParameters.at(12).parLimitUS_hi[2]=150;
-  v_fitParameters.at(12).parLimitUS_lo[3]=40;  v_fitParameters.at(12).parLimitUS_hi[3]=80;
-  v_fitParameters.at(12).parLimitUS_lo[4]=100; v_fitParameters.at(12).parLimitUS_hi[4]=500;
-  v_fitParameters.at(12).parLimitUS_lo[5]=10;  v_fitParameters.at(12).parLimitUS_hi[5]=200;
-  v_fitParameters.at(12).parLimitSS_lo[0]=80;  v_fitParameters.at(12).parLimitSS_hi[0]=100;
-  v_fitParameters.at(12).parLimitSS_lo[1]=5;  v_fitParameters.at(12).parLimitSS_hi[1]=40;
-  v_fitParameters.at(12).parLimitSS_lo[2]=90;  v_fitParameters.at(12).parLimitSS_hi[2]=150;
-  v_fitParameters.at(12).parLimitSS_lo[3]=50;  v_fitParameters.at(12).parLimitSS_hi[3]=100;
-  v_fitParameters.at(12).parLimitSS_lo[4]=5; v_fitParameters.at(12).parLimitSS_hi[4]=15;
-  v_fitParameters.at(12).parLimitSS_lo[5]=2;  v_fitParameters.at(12).parLimitSS_hi[5]=10;*/
-  
   gStyle->SetOptStat(0);
   
   std::ofstream outfile("qFRDashboard/index.html");
@@ -495,18 +481,6 @@ void VLQ_ChargeFlipRate_Fit_ee()
   outfile<<"</body>"<<std::endl;
   outfile<<"</html>"<<std::endl;
   outfile.close(); 
-  
-  /*
-  h_PromptRate_ee_TT_OS->GetXaxis()->SetRange(10, 12);
-  h_PromptRate_ee_TT_OS->GetYaxis()->SetRange(4, 5);
-  TH1F *h_mll_OS=(TH1F*)h_PromptRate_ee_TT_OS->Project3D("z")->Clone("h_mll_OS");
-  
-  h_PromptRate_ee_TT_SS->GetXaxis()->SetRange(10, 12);
-  h_PromptRate_ee_TT_SS->GetYaxis()->SetRange(4, 5);
-  TH1F *h_mll_SS=(TH1F*)h_PromptRate_ee_TT_SS->Project3D("z")->Clone("h_mll_SS");
-  */
-  
-  
 
 }
   
